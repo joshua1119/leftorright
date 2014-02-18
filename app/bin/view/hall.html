@@ -1,0 +1,17 @@
+<block tpl-id="message-hall">
+    <style>
+        button{width:100px; height:40px;}
+        #content{width:360px;height:300px;margin-top:10px;}
+    </style>
+    <div align="center">
+        <h1>Clouda message Hall</h1>
+        <input style="height:40px; width:260px;padding-left: 5px;" id="messageInput" placeholder="Say Something Now:"/>
+        <button id="messageSubmit">submit</button> <br/>
+        <textarea readonly="readonly" id="content">
+            {{#each data}}
+            {{this.content}}
+            {{/each}}
+        </textarea><br/>
+        <button id="clearHistory">clear history</button>
+    </div>
+</block>
